@@ -18,6 +18,6 @@ function createOrUpdateUser(initialValues: User) {
   // Оновлення користувача
 }
 
-createOrUpdateUser({ email: 'user@mail.com', password: 'password123' });
+// createOrUpdateUser({ email: 'user@mail.com', password: 'password123' });
 
 export {};
