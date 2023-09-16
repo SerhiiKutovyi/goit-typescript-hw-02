@@ -14,4 +14,8 @@ function customError():never {
   throw new Error('Error');
 }
 
+showMessage('Hello!');
+console.log(calc(3, 5));
+customError();
+
 export {};
