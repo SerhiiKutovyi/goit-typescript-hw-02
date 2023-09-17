@@ -23,7 +23,6 @@
 
 // ======================== 2й вариант ==================
 
-
 enum Days {
   Monday,
   Tuesday,
@@ -31,19 +30,18 @@ enum Days {
   Thursday,
   Friday,
   Saturday,
-  Sunday 
+  Sunday,
 }
 
-const today = Days.Wednesday;
+const today = Days.Tuesday;
 
-function isWeekend(today: any):void {
-  if (today === Days.Saturday || today === Days.Sunday) {
-    console.log('вихідний');
-    return;
-  } else {
-    console.log('робочий');
-  }
-  
+function isWeekend(day: Days): boolean {
+return day === Days.Saturday || day === Days.Sunday;
 }
 
-isWeekend(Days.Tuesday);
+ if (isWeekend(today)) {
+   console.log('вихідний');
+ } else {
+   console.log('робочий');
+ }
+
