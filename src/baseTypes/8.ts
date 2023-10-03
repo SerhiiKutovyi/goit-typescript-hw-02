@@ -4,9 +4,7 @@
 */
 type Gender = 'male' | 'female';
 
-let myGender: Gender;
-myGender = 'female';
-myGender = 'male';
+const myGender: Gender = 'female';
 
 console.log(myGender);
 
