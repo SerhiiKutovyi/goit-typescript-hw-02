@@ -10,21 +10,34 @@
 
 // ==========================  1  ==================================================
 
+// type User = {
+//   name: string;
+//   surname: string;
+//   email: string;
+//   password: string;
+// }
+
+// function createOrUpdateUser(
+//   initialValues: Pick<User,'email' | 'password'>
+// ) {
+//   // Оновлення користувача
+//   return initialValues;
+// }
+//===========================  2  ===================================================
 type User = {
   name: string;
   surname: string;
   email: string;
   password: string;
+};
+
+function createOrUpdateUser(initialValues: Partial<User>): string | undefined {
+  if (typeof initialValues === 'string') {
+    return initialValues;
+  }
 }
 
-function createOrUpdateUser(
-  initialValues: Pick<User,'email' | 'password'>
-) {
-  // Оновлення користувача
-  return initialValues;
-}
-
-//===========================  2  ===================================================
+//===========================  3  ===================================================
 
 // type User = {
 //   name?: string;
@@ -38,7 +51,8 @@ function createOrUpdateUser(
 // return initialValues;
 // }
 
-console.log(createOrUpdateUser({ email: 'user@mail.com', password: 'password123' }));
-
+console.log(
+  createOrUpdateUser({ email: 'user@mail.com', password: 'password123' })
+);
 
 export {};
