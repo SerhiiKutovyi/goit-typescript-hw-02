@@ -1,5 +1,5 @@
 // /*
-//   У вас є тип Form, який містить інформацію про форму, включаючи поле errors. 
+//   У вас є тип Form, який містить інформацію про форму, включаючи поле errors.
 //   Ви хочете створити новий тип Params, який включає всі поля з Form, крім errors.
 // */
 
@@ -40,31 +40,24 @@
 // export {};
 
 class House {
-  private street: string;
-
-  private tenants: string[] = [];
-
-  constructor(n: string) {
-    this.street = n;
-  }
+  constructor(private street: string, private tenants: string[] = []) {}
 
   public showAddress(this: House) {
     console.log('Address: ' + this.street);
   }
 
-  public addTenant(tenant: string) {
-    this.tenants.push(tenant)
+  addTenant(tenant: string) {
+    this.tenants.push(tenant);
   }
   public showTenants() {
     console.log(this.tenants);
-    
   }
 }
 
 const house = new House('Middle-earth');
 
-house.showAddress()
+house.addTenant('Max');
+house.addTenant('Serhii');
 
-const houseCopy = { street: 'Dummy', showAddress: house.showAddress };
-
-
+house.showAddress();
+house.showTenants();
